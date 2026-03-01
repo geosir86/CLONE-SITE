@@ -1,13 +1,12 @@
 :root {
-  --bg: #f2f2f5;
-  --ink: #666165;
+  --bg: #f3f3f5;
+  --ink: #605b60;
   --header: #dfe0ec;
-  --card-radius: 20px;
+  --line: #cfd1dd;
+  --title: #5f5a62;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -18,247 +17,168 @@ body {
 
 .topbar {
   background: var(--header);
-  min-height: 86px;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 30px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 14px 28px;
-  gap: 24px;
-  border-bottom: 1px solid #c9cad8;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .brand h1 {
   margin: 0;
-  font-size: 34px;
   font-family: Georgia, serif;
+  font-size: 44px;
+  font-weight: 500;
   line-height: 1;
+  color: #4e4b54;
 }
 
 .brand p {
-  margin: 8px 0 0;
-  font-size: 14px;
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: #75717c;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 nav a {
   text-decoration: none;
-  color: #59555f;
-  font-size: 14px;
+  color: #57535d;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
+  padding: 7px 9px;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  background: rgba(255,255,255,0.55);
 }
 
 .container {
-  width: min(1150px, 94vw);
+  width: min(1160px, 95vw);
   margin: 0 auto;
-  padding: 16px 0 56px;
+  padding: 18px 0 60px;
 }
 
 .hero {
-  border-radius: 0 0 32px 32px;
-  min-height: 420px;
-  background: radial-gradient(circle at 10% 20%, #423983 0%, #81456f 26%, transparent 38%),
-    radial-gradient(circle at 85% 75%, #5d3a7a 0%, #aa5f6f 26%, transparent 45%),
-    linear-gradient(130deg, #743d7f 0%, #b27670 55%, #d39b5b 100%);
+  min-height: 430px;
+  border-radius: 0 0 30px 30px;
+  background: linear-gradient(rgba(78,59,98,.48), rgba(78,59,98,.48)),
+    url('https://marasam.sites.sch.gr/wp-content/uploads/2025/09/ChatGPT-Image-31-%CE%91%CF%85%CE%B3-2025-10_43_36-%CF%80.%CE%BC..png') center/cover no-repeat;
+  color: #fff;
   display: grid;
   place-items: center;
-  color: #fff;
   text-align: center;
 }
 
 .hero h2 {
-  font-size: 64px;
   margin: 0;
+  font-size: clamp(34px, 4vw, 66px);
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 35px;
   margin: 10px 0 0;
+  font-size: clamp(18px, 2vw, 36px);
 }
 
 .cards {
-  margin: 64px auto 0;
-  width: min(1000px, 90vw);
+  width: min(980px, 90vw);
+  margin: 52px auto 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
 }
 
 .card {
-  border-radius: var(--card-radius);
-  padding: 26px;
-  min-height: 300px;
+  border-radius: 18px;
+  padding: 24px;
+  min-height: 290px;
   position: relative;
 }
 
 .card h3 {
   margin: 0 0 14px;
-  font-size: 44px;
-  line-height: 1.06;
+  font-size: clamp(36px, 2vw, 50px);
+  line-height: 1.05;
+  color: var(--title);
 }
 
 .card p {
   margin: 0;
-  font-size: 26px;
-  line-height: 1.45;
+  font-size: clamp(20px, 1.15vw, 30px);
+  line-height: 1.4;
 }
 
 .card-link {
-  display: inline-block;
-  margin-top: 18px;
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
   text-decoration: none;
-  color: #3c3c3c;
+  color: #3d3a40;
   font-weight: 700;
 }
 
-.card .icon {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 56px;
-  opacity: 0.6;
-}
+.lilac { background: #d9d9eb; min-height: 430px; }
+.cyan { background: #99d2cf; }
+.sage { background: #d4decb; min-height: 430px; }
+.gray { background: #cbc7c2; }
+.cream { background: #ece9d2; min-height: 510px; margin-top: -95px; }
+.rose { background: #eab8b0; }
+.blue { background: #b5cee8; min-height: 220px; width: 48%; grid-column: 1 / span 3; justify-self: center; }
 
-.lilac {
-  background: #d8d8ea;
-}
-
-.cyan {
-  background: #9cd4d2;
-}
-
-.sage {
-  background: #d2ddca;
-}
-
-.gray {
-  background: #ccc8c3;
-}
-
-.cream {
-  background: #ece9d0;
-}
-
-.rose {
-  background: #ebbab2;
-}
-
-.blue {
-  background: #b6cfe8;
-}
-
-.tall {
-  min-height: 430px;
-}
-
-.mid-tall {
-  min-height: 520px;
-  margin-top: -110px;
-}
-
-.wide {
-  grid-column: 1 / span 3;
-  width: 48%;
-  justify-self: center;
-  min-height: 220px;
-}
+.inner-container { width: min(1160px, 95vw); }
 
 .page {
-  margin: 40px auto;
-  width: min(1000px, 92vw);
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 32px;
-  box-shadow: 0 10px 26px rgba(70, 70, 90, 0.07);
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-shadow: 0 8px 24px rgba(50, 50, 80, 0.08);
 }
 
 .page h2 {
   margin: 0;
-  font-size: 42px;
-  color: #514e57;
+  color: #4f4b53;
+  font-size: 40px;
 }
 
 .page p {
-  font-size: 21px;
-  line-height: 1.6;
+  font-size: 20px;
+  margin: 12px 0 10px;
 }
 
-.page ul {
-  padding-left: 22px;
-  font-size: 20px;
-  line-height: 1.8;
-}
+.page ul { margin: 0; padding-left: 22px; }
+.page li { margin: 8px 0; line-height: 1.5; font-size: 18px; }
+.page a { color: #2e5c87; }
 
 .back-home {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 18px;
   text-decoration: none;
-  color: #346f8f;
   font-weight: 700;
 }
 
 .footer {
-  margin-top: 50px;
-  text-align: center;
   background: #dfe0ec;
-  padding: 36px 20px 56px;
+  text-align: center;
+  padding: 35px 20px 54px;
   color: #118575;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.footer p:last-child {
-  color: #3f3f3f;
-}
+.footer p:last-child { color: #3d3d3d; }
 
-@media (max-width: 1100px) {
-  .brand h1 {
-    font-size: 30px;
-  }
-
-  .hero h2 {
-    font-size: 42px;
-  }
-
-  .hero p {
-    font-size: 24px;
-  }
-
-  .card h3 {
-    font-size: 34px;
-  }
-
-  .card p,
-  .page p,
-  .page ul {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 880px) {
-  .topbar {
-    padding: 12px 18px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .mid-tall {
-    margin-top: 0;
-  }
-
-  .wide {
-    grid-column: auto;
-    width: 100%;
-  }
-
-  .page h2 {
-    font-size: 32px;
-  }
+@media (max-width: 980px) {
+  .brand h1 { font-size: 33px; }
+  .cards { grid-template-columns: 1fr; }
+  .cream { margin-top: 0; min-height: 320px; }
+  .blue { width: 100%; grid-column: auto; }
 }
