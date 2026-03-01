@@ -1,0 +1,136 @@
+:root {
+  --bg: #f2f2f5;
+  --ink: #666165;
+  --header: #dfe0ec;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.topbar {
+  background: var(--header);
+  min-height: 86px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 48px;
+  gap: 24px;
+  border-bottom: 1px solid #c9cad8;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 44px;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.brand p {
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #59555f;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.container {
+  width: min(1150px, 94vw);
+  margin: 0 auto;
+  padding: 16px 0 56px;
+}
+
+.hero {
+  border-radius: 0 0 32px 32px;
+  min-height: 420px;
+  background: radial-gradient(circle at 10% 20%, #423983 0%, #81456f 26%, transparent 38%),
+    radial-gradient(circle at 85% 75%, #5d3a7a 0%, #aa5f6f 26%, transparent 45%),
+    linear-gradient(130deg, #743d7f 0%, #b27670 55%, #d39b5b 100%);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h2 { font-size: 64px; margin: 0; }
+.hero p { font-size: 35px; margin: 10px 0 0; }
+
+.cards {
+  margin: 64px auto 0;
+  width: min(1000px, 90vw);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 26px;
+  min-height: 300px;
+  position: relative;
+}
+
+.card h3 { margin: 0 0 14px; font-size: 52px; line-height: 1.06; }
+.card p { margin: 0; font-size: 33px; line-height: 1.45; }
+.card .icon {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 56px;
+  opacity: 0.6;
+}
+
+.lilac { background: #d8d8ea; }
+.cyan { background: #9cd4d2; }
+.sage { background: #d2ddca; }
+.gray { background: #ccc8c3; }
+.cream { background: #ece9d0; }
+.rose { background: #ebbab2; }
+.blue { background: #b6cfe8; }
+
+.tall { min-height: 430px; }
+.mid-tall { min-height: 520px; margin-top: -110px; }
+.wide { grid-column: 1 / span 3; width: 48%; justify-self: center; min-height: 220px; }
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  background: #dfe0ec;
+  padding: 36px 20px 56px;
+  color: #118575;
+  font-size: 20px;
+}
+
+.footer p:last-child { color: #3f3f3f; }
+
+@media (max-width: 1100px) {
+  .brand h1 { font-size: 30px; }
+  .hero h2 { font-size: 42px; }
+  .hero p { font-size: 24px; }
+  .card h3 { font-size: 34px; }
+  .card p { font-size: 22px; }
+}
+
+@media (max-width: 880px) {
+  .topbar { padding: 12px 18px; }
+  .cards { grid-template-columns: 1fr; }
+  .mid-tall { margin-top: 0; }
+  .wide { grid-column: auto; width: 100%; }
+}
