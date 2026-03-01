@@ -6,7 +6,9 @@
   --title: #5f5a62;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -59,7 +61,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background: rgba(255,255,255,0.55);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .container {
@@ -71,8 +73,8 @@ nav a.active {
 .hero {
   min-height: 430px;
   border-radius: 0 0 30px 30px;
-  background: linear-gradient(rgba(78,59,98,.48), rgba(78,59,98,.48)),
-    url('https://marasam.sites.sch.gr/wp-content/uploads/2025/09/ChatGPT-Image-31-%CE%91%CF%85%CE%B3-2025-10_43_36-%CF%80.%CE%BC..png') center/cover no-repeat;
+  background: linear-gradient(rgba(78, 59, 98, 0.48), rgba(78, 59, 98, 0.48)),
+    url("https://marasam.sites.sch.gr/wp-content/uploads/2025/09/ChatGPT-Image-31-%CE%91%CF%85%CE%B3-2025-10_43_36-%CF%80.%CE%BC..png") center/cover no-repeat;
   color: #fff;
   display: grid;
   place-items: center;
@@ -127,15 +129,64 @@ nav a.active {
   font-weight: 700;
 }
 
-.lilac { background: #d9d9eb; min-height: 430px; }
-.cyan { background: #99d2cf; }
-.sage { background: #d4decb; min-height: 430px; }
-.gray { background: #cbc7c2; }
-.cream { background: #ece9d2; min-height: 510px; margin-top: -95px; }
-.rose { background: #eab8b0; }
-.blue { background: #b5cee8; min-height: 220px; width: 48%; grid-column: 1 / span 3; justify-self: center; }
+.lilac {
+  background: #d9d9eb;
+  min-height: 430px;
+}
 
-.inner-container { width: min(1160px, 95vw); }
+.cyan {
+  background: #99d2cf;
+}
+
+.sage {
+  background: #d4decb;
+  min-height: 430px;
+}
+
+.gray {
+  background: #cbc7c2;
+}
+
+.cream {
+  background: #ece9d2;
+  min-height: 510px;
+  margin-top: -95px;
+}
+
+.rose {
+  background: #eab8b0;
+}
+
+.blue {
+  background: #b5cee8;
+  min-height: 220px;
+  width: 48%;
+  grid-column: 1 / span 3;
+  justify-self: center;
+}
+
+.inner-container {
+  width: min(980px, 90vw);
+}
+
+.page-banner {
+  margin: 8px 0 22px;
+  background: linear-gradient(135deg, #f7f7fb 0%, #ececf5 100%);
+  border: 1px solid #e4e4ee;
+  border-radius: 16px;
+  padding: 22px 24px;
+}
+
+.page-banner h2 {
+  margin: 0;
+  color: #4f4b53;
+  font-size: 36px;
+}
+
+.page-banner p {
+  margin: 10px 0 0;
+  font-size: 18px;
+}
 
 .page {
   background: #fff;
@@ -144,20 +195,32 @@ nav a.active {
   box-shadow: 0 8px 24px rgba(50, 50, 80, 0.08);
 }
 
-.page h2 {
+.resource-list {
+  list-style: none;
   margin: 0;
-  color: #4f4b53;
-  font-size: 40px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
 }
 
-.page p {
-  font-size: 20px;
-  margin: 12px 0 10px;
+.resource-list li {
+  margin: 0;
 }
 
-.page ul { margin: 0; padding-left: 22px; }
-.page li { margin: 8px 0; line-height: 1.5; font-size: 18px; }
-.page a { color: #2e5c87; }
+.resource-list a {
+  display: block;
+  background: #f6f8fb;
+  border: 1px solid #dce4ef;
+  border-radius: 12px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: #2e5c87;
+  font-size: 17px;
+}
+
+.resource-list a:hover {
+  background: #edf4ff;
+}
 
 .back-home {
   display: inline-block;
@@ -174,11 +237,34 @@ nav a.active {
   font-size: 18px;
 }
 
-.footer p:last-child { color: #3d3d3d; }
+.footer p:last-child {
+  color: #3d3d3d;
+}
 
 @media (max-width: 980px) {
-  .brand h1 { font-size: 33px; }
-  .cards { grid-template-columns: 1fr; }
-  .cream { margin-top: 0; min-height: 320px; }
-  .blue { width: 100%; grid-column: auto; }
+  .topbar {
+    padding: 12px 16px;
+  }
+
+  .brand h1 {
+    font-size: 33px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cream {
+    margin-top: 0;
+    min-height: 320px;
+  }
+
+  .blue {
+    width: 100%;
+    grid-column: auto;
+  }
+
+  .page-banner h2 {
+    font-size: 30px;
+  }
 }
