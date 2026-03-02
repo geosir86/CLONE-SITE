@@ -427,3 +427,57 @@ nav a.active {
   .a-ref-card { font-size: 21px; }
   .book-strip h3 { font-size: 38px; }
 }
+
+
+.section-reference-panel {
+  background: #e9e9ec;
+  border-radius: 6px;
+  padding: 0 18px 22px;
+  border-top: 4px solid #d8c9ba;
+}
+
+.section-reference-titlebar {
+  margin: 20px 0 18px;
+  border-radius: 0 0 18px 18px;
+  background: linear-gradient(90deg, #304f62 0%, #44bca0 100%);
+  color: #fff;
+  padding: 18px 20px;
+  box-shadow: 0 3px 0 #2b8fdf;
+}
+
+.section-reference-titlebar h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 46px;
+}
+
+.section-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.section-ref-card {
+  background: #f8f8f9;
+  border-radius: 14px;
+  border-bottom: 4px solid #2f96ea;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  padding: 16px 18px;
+  font-size: 27px;
+  color: #2a2a2a;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-ref-card span {
+  font-size: 34px;
+  color: #40b595;
+}
+
+@media (max-width: 980px) {
+  .section-reference-titlebar h2 { font-size: 30px; }
+  .section-reference-grid { grid-template-columns: 1fr; }
+  .section-ref-card { font-size: 21px; }
+}
