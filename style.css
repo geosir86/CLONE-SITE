@@ -268,3 +268,18 @@ nav a.active {
     font-size: 30px;
   }
 }
+
+
+.content-page p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.note-box {
+  margin-top: 12px;
+  background: #fff6e8;
+  border: 1px solid #f0d8a9;
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #6d5b36;
+}
