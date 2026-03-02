@@ -283,3 +283,18 @@ nav a.active {
   padding: 12px 14px;
   color: #6d5b36;
 }
+
+
+.embed-page h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #4f4b53;
+}
+
+.reference-frame {
+  width: 100%;
+  min-height: 950px;
+  border: 1px solid #d6dbe6;
+  border-radius: 12px;
+  background: #fff;
+}
