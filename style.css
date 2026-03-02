@@ -329,3 +329,45 @@ nav a.active {
   border-radius: 10px;
   padding: 8px 10px;
 }
+
+
+.course-shell {
+  padding-top: 22px;
+}
+
+.crumb {
+  margin: 0;
+  font-size: 13px;
+  color: #8a8a95;
+}
+
+.entry-title {
+  margin: 10px 0 12px;
+  font-size: 38px;
+  color: #4f4b53;
+}
+
+.entry-intro {
+  margin-top: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.chapter-list-plain {
+  margin: 16px 0 0;
+  padding-left: 22px;
+}
+
+.chapter-list-plain li {
+  margin: 10px 0;
+}
+
+.chapter-list-plain a {
+  color: #2e5c87;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.chapter-list-plain a:hover {
+  text-decoration: underline;
+}
